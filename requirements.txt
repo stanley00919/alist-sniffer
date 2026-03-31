@@ -1,0 +1,9 @@
+PyQt6>=6.6
+httpx>=0.27
+beautifulsoup4>=4.12
+lxml>=5.0
+playwright>=1.44
+aria2p>=0.11
+m3u8>=3.5
+flask>=3.0
+winotify>=1.1

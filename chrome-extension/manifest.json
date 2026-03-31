@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "WebMedia Sniffer",
+  "version": "1.0",
+  "description": "Detect media URLs on the current page and send them to WebMedia Sniffer.",
+  "permissions": ["webRequest", "tabs", "storage", "declarativeNetRequest"],
+  "host_permissions": ["<all_urls>", "http://localhost:9527/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "WebMedia Sniffer",
+    "default_badge_text": ""
+  }
+}

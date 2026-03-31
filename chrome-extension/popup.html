@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 340px;
+      min-height: 200px;
+      background: #1E1E2E;
+      color: #CDD6F4;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 13px;
+      padding: 12px;
+    }
+    h1 { font-size: 15px; margin-bottom: 8px; color: #A29BFE; }
+    #status { color: #A6ADC8; font-size: 12px; margin-bottom: 8px; }
+    #media-list {
+      max-height: 260px;
+      overflow-y: auto;
+      border: 1px solid #313244;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .media-item {
+      padding: 6px 10px;
+      border-bottom: 1px solid #313244;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      word-break: break-all;
+    }
+    .media-item:last-child { border-bottom: none; }
+    .media-item input { flex-shrink: 0; }
+    .btn {
+      width: 100%;
+      padding: 7px;
+      background: #6C5CE7;
+      color: #CDD6F4;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 6px;
+    }
+    .btn:hover { background: #A29BFE; }
+    .btn.secondary { background: #313244; }
+    .btn.secondary:hover { background: #45475A; }
+    #msg { font-size: 12px; color: #00B894; min-height: 16px; margin-top: 4px; }
+    #msg.err { color: #E17055; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #1E1E2E; }
+    ::-webkit-scrollbar-thumb { background: #313244; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>WebMedia Sniffer</h1>
+  <div id="status">Loading...</div>
+  <div id="media-list"></div>
+  <button class="btn" id="btn-send-page">Send Page URL to Sniffer</button>
+  <button class="btn secondary" id="btn-send-selected">Send Selected Media URLs</button>
+  <div id="msg"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
